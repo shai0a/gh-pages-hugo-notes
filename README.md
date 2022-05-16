@@ -37,9 +37,7 @@ echo "theme = '<theme>'" >> config.toml
 1.  Edit **config.toml**
  - Change ***baseURL*** value from ***'http://example.org/'*** to ***'https://\<user\>.github.io/'***
  - Add ***publishDir = 'docs'***
-2. Tell GitHub to bypass Jekyll processing
-`touch docs/.nojekyll`
-3. Update
+2. Update
 `hugo -D`
 
 ## Setup GitHub and repository
@@ -79,6 +77,9 @@ gh repo create <user>.github.io --public --source=. --remote=upstream
 ```
 
 ### Commit and push to GitHub
+Tell GitHub to bypass Jekyll processing
+`touch docs/.nojekyll`
+
 ```
 git add .
 git commit -m "first commit"
