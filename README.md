@@ -38,7 +38,7 @@ echo "theme = '<theme>'" >> config.toml
  - Change ***baseURL*** value from ***'http://example.org/'*** to ***'https://\<user\>.github.io/'***
  - Add ***publishDir = 'docs'***
 2. Tell GitHub to bypass Jekyll processing
-`touch .nojekyll`
+`touch docs/.nojekyll`
 3. Update
 `hugo -D`
 
