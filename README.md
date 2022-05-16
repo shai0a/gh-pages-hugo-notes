@@ -6,21 +6,25 @@
 
 ## Hugo new site quickstart and test
 1. Create a new site in the specified directory
-`hugo new site <dir>`
-`cd <dir>`
+```
+hugo new site <dir>
+cd <dir>
+```
 
 2. Create Git repository
 `git init`
 
 3. Add a theme ([Hugo Themes](https://themes.gohugo.io/))
 - Find the theme's repository using the Download link on the theme's page
-`git submodule add <theme repository> themes/<theme>`
-`echo "theme = '<theme>'" >> config.toml`
+```
+git submodule add <theme repository> themes/<theme>
+echo "theme = '<theme>'" >> config.toml
+```
 
 5. Create some content
 `hugo new posts/<post-name>.md`
 
-6. Replace *draft: true* with *draft: false* in **config.toml** so that the post shows up
+6. Replace ***draft: true*** with ***draft: false*** in **config.toml** so that the post shows up
 
 7. Test it out
 `hugo server -D`
@@ -31,7 +35,7 @@
 ## Configuration for GitHub
 **Replace instances of `<user>` with GitHub user name**
 1.  Edit **config.toml**
- - Change ***baseURL*** value from ***'http://example.org/'*** to ***'https://<user>.github.io/'***
+ - Change ***baseURL*** value from ***'http://example.org/'*** to ***'https://\<user\>.github.io/'***
  - Add ***publishDir = 'docs'***
 2. Tell GitHub to bypass Jekyll processing
 `touch .nojekyll`
@@ -69,8 +73,10 @@ You will be prompted for the SSH public key you generated earlier if you select 
 Paste and save at *https://github.com/settings/keys -> New SSH key*
 
 ### Create new repository on GitHub (Using GitHub CLI)
-`cd <dir>`
-`gh repo create <user>.github.io --public --source=. --remote=upstream`
+```
+cd <dir>
+gh repo create <user>.github.io --public --source=. --remote=upstream
+```
 
 ### Commit and push to GitHub
 ```
