@@ -20,22 +20,24 @@ cd <dir>
 git submodule add <theme repository> themes/<theme>
 echo "theme = '<theme>'" >> config.toml
 ```
+:warning: The theme repository should be a public and read-only repository therefore it will probably begin with *https://*
 
-5. Create some content
+4. Create some content
 `hugo new posts/<post-name>.md`
 
-6. Replace ***draft: true*** with ***draft: false*** in **config.toml** so that the post shows up
+5. Replace ***draft: true*** with ***draft: false*** in **config.toml** so that the post shows up
 
-7. Test it out
+6. Test it out
 `hugo server -D`
 
-8. Open in browser
-`http://localhost:1313`
+7. Open in browser
+[http://localhost:1313](http://localhost:1313)
 
 ## Configuration for GitHub
 **Replace instances of `<user>` with GitHub user name**
 1.  Edit **config.toml**
  - Change ***baseURL*** value from ***'http://example.org/'*** to ***'https://\<user\>.github.io/'***
+ :warning: Note the change from 'http' to 'https'
  - Add ***publishDir = 'docs'***
 2. Update
 `hugo -D`
@@ -77,9 +79,9 @@ gh repo create <user>.github.io --public --source=. --remote=upstream
 ```
 
 ### Commit and push to GitHub
-Tell GitHub to bypass Jekyll processing
+1. Tell GitHub to bypass Jekyll processing
 `touch docs/.nojekyll`
-
+2. Commit and push to GitHub
 ```
 git add .
 git commit -m "first commit"
@@ -97,3 +99,5 @@ Change ***Source*** from **'/ (root)'** to ***'/docs'*** and save
 
 
 2. Try browsing [https://\<user\>.github.io/](https://\<user\>.github.io/)
+:warning: Building may take a few minutes. Check under *repository -> Actions -> Workflows -> 
+pages-build-deployment*
