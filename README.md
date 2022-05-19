@@ -139,6 +139,6 @@ Go to the repository on GitHub.com
 Change ***Source*** from **'/ (root)'** to ***'/docs'*** and save
 
 
-2. Try browsing [https://\<user\>.github.io/](https://\<user\>.github.io/)
+2. Try browsing [https://\<user\>.github.io/](https://\<user\>.github.io/)  
 :warning: Building may take a few minutes. Check under *repository -> Actions -> Workflows -> 
 pages-build-deployment*
